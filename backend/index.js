@@ -32,6 +32,10 @@ app.use("/api/users", userRoute);
 app.use("/api/posts", postRoute);
 app.use("/api/comments", commentRoute);
 
+app.get("/", (req, res) => {
+  res.send("<h3>Hello All</h3>");
+});
+
 //Image Upload
 const storage = multer.diskStorage({
   destination: (req, file, fn) => {
